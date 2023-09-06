@@ -1,0 +1,232 @@
+<!DOCTYPE html lang="ar">
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="req/css/bootstrap.min.css">
+    <!--[if IE 7]>
+<style type="text/css">
+  .selector{line-height:0.5;} // Or whatever line height you need
+</style>
+<![endif]-->
+    <title>Invoice Bill</title>
+  <style>
+  
+        body {
+          background: #eee;
+          direction: rtl;
+          font-family: 'Cairo', sans-serif;
+        }
+        .invoice {
+          width: 970px !important;
+          margin: 50px auto;
+        }
+        .invoice .invoice-header {
+          padding: 25px 25px 15px;
+        }
+        .invoice .invoice-header h1 {
+          margin: 0;
+        }
+        .invoice .invoice-header .media .media-body {
+          font-size: 0.9em;
+          margin: 0;
+        }
+        .invoice .invoice-body {
+          border-radius: 10px;
+          padding: 25px;
+          background: #fff;
+        }
+        .invoice .invoice-footer {
+          padding: 15px;
+          font-size: 0.9em;
+          text-align: center;
+          color: #999;
+        }
+        .logo {
+          max-height: 70px;
+          border-radius: 10px;
+        }
+        .dl-horizontal {
+          margin: 0;
+        }
+        .dl-horizontal dt {
+          float: left;
+          width: 80px;
+          overflow: hidden;
+          clear: left;
+          text-align: right;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .dl-horizontal dd {
+          margin-left: 90px;
+        }
+        .rowamount {
+          padding-top: 15px !important;
+        }
+        .rowtotal {
+          font-size: 1.3em;
+        }
+        .colfix {
+          width: 12%;
+        }
+        .mono {
+          font-family: monospace;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container invoice">
+          <hr>
+          <div class="invoice-header">
+            <div class="row">
+              <div class="col-xs-8">
+                <div class="media">
+                  <img class="media-object logo" src="LogoImage" />
+                  <ul class="media-body list-unstyled text-right">
+                      <li><strong>NameShop</strong></li>
+                      <li>رقم الهاتف :ShopPhone</li>
+                      <li>العنوان : ShopAddress </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="invoice-body text-right">
+            <div class="row">
+              <div class="col-xs-12 text-right">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    
+                  </div>
+                  <div class="panel-body text-right">
+                    <dl class="dl-horizontal text-right">
+                        اسم الزبون : <strong>NameCostumer</strong>
+                        <br>
+                        العنوان : <strong>AddressCostumer</strong>
+                        <br>
+                        رقم الهاتف : <strong>PhoneCostumer</strong>
+                        <br>
+                        الوقت والتاريخ : <strong>DateRegister</strong>
+                        <br>
+                      <br>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title text-right">المشتريات</h3>
+              </div>
+              <table class="table table-bordered table-condensed">
+                <thead>
+                  <tr>
+                    <th>السلع</th>
+                    <th class="text-center colfix">السعر</th>
+                    <th class="text-center colfix">العدد</th>
+                    <th class="text-center colfix">الخصم</th>
+                    <th class="text-center colfix">طريقة الدفع</th>
+                    <th class="text-center colfix">المجموع</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Lorem Ipsum Dolor
+                    </td>
+                    <td class="text-right">
+                      <span class="mono">$1,000.00</span>
+                    </td>
+                    <td class="text-right">
+                      <span class="mono">$18,000.00</span>
+
+                    </td>
+                    <td class="text-right">
+                      <span class="mono">$1,800.00</span>
+
+                    </td>
+                    <td class="text-right">
+                      <span class="mono">$3,240.00</span>
+
+                    </td>
+                    <td class="text-right">
+                      <strong class="mono">$19,440</strong>
+
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      Sit Amet Dolo
+                    </td>
+                    <td class="text-right">
+                      <span class="mono">$120.00</span>
+
+                    </td>
+                    <td class="text-right">
+                      <span class="mono">$240.00</span>
+
+                    </td>
+                    <td class="text-right">
+                      <span class="mono">$0.00</span>
+
+                    </td>
+                    <td class="text-right">
+                      <span class="mono">$72.00</span>
+
+                    </td>
+                    <td class="text-right">
+                      <strong class="mono">$312.00</strong>
+
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <br>
+            <br>
+            <div class="panel panel-default">
+              <table class="table table-bordered table-condensed">
+                <thead>
+                  <tr>
+                    <td class="text-center col-xs-1">الملبغ الكلي</td>
+                    <td class="text-center col-xs-1">مبلغ الخصم</td>
+                    <td class="text-center col-xs-1">الملبغ  المطلوب</td>
+                    <td class="text-center col-xs-1">الملبغ  الواصل</td>
+                    <td class="text-center col-xs-1">الباقي</td>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="text-center rowtotal mono">SubTotalPrice</th>
+                    <th class="text-center rowtotal mono">TotalPayOffPrice</th>
+                    <th class="text-center rowtotal mono">TotalPrice</th>
+                    <th class="text-center rowtotal mono">ArrivePrice</th>
+                    <th class="text-center rowtotal mono">RemianPrice</th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <hr>
+          <div class="invoice-footer">
+            شكراً لاشرائكم منتجات
+            <br/> نأمل ان نراكم مرة اخرى
+            <br/>
+            <strong>~NameShopg~</strong>
+            <br/>
+            ~ برمجة وتصميم : مقتدى جبار فرهود~
+          </div>
+          <hr>
+        </div>
+        <script src="req/jquery-3.4.1.min.js"></script>
+
+      <script src="req/popper.min.js"></script>
+      <script src="req/js/bootstrap.min.js"></script>
+
+    </body>
+</html>

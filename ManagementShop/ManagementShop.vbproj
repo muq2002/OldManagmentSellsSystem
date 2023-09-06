@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EmguCV.3.1.0.1\build\EmguCV.props" Condition="Exists('..\packages\EmguCV.3.1.0.1\build\EmguCV.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5BC1BC53-53FE-4161-BD84-07CAF144058B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ManagementShop.My.MyApplication</StartupObject>
+    <RootNamespace>ManagementShop</RootNamespace>
+    <AssemblyName>ManagementShop</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ManagementShop.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ManagementShop.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>assets\shopCart.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accord">
+      <HintPath>..\..\FaceDetection\packages\Accord.2.8.1.0\lib\Accord.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Imaging">
+      <HintPath>..\..\FaceDetection\packages\Accord.Imaging.2.8.1.0\lib\Accord.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.MachineLearning">
+      <HintPath>..\..\FaceDetection\packages\Accord.MachineLearning.2.8.1.0\lib\Accord.MachineLearning.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math">
+      <HintPath>..\..\FaceDetection\packages\Accord.Math.2.8.1.0\lib\Accord.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Statistics">
+      <HintPath>..\..\FaceDetection\packages\Accord.Statistics.2.8.1.0\lib\Accord.Statistics.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Vision">
+      <HintPath>..\..\FaceDetection\packages\Accord.Vision.2.8.1.0\lib\Accord.Vision.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI">
+      <HintPath>..\packages\EmguCV.3.1.0.1\lib\net30\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI.GL">
+      <HintPath>..\packages\EmguCV.3.1.0.1\lib\net30\Emgu.CV.UI.GL.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.World">
+      <HintPath>..\packages\EmguCV.3.1.0.1\lib\net30\Emgu.CV.World.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.QRCode">
+      <HintPath>..\..\..\..\..\..\Downloads\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="OpenTK">
+      <HintPath>..\packages\OpenTK.1.1.2349.61993\lib\NET40\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl">
+      <HintPath>..\packages\OpenTK.GLControl.1.1.2349.61993\lib\NET40\OpenTK.GLControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WebCam_Capture">
+      <HintPath>..\..\QR Code Scanner\bin\Debug\WebCam_Capture.dll</HintPath>
+    </Reference>
+    <Reference Include="ZedGraph">
+      <HintPath>..\packages\ZedGraph.5.1.7\lib\net35-Client\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="forms\debtProductForm.Designer.vb">
+      <DependentUpon>debtProductForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\debtProductForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\registerCustomerForm.Designer.vb">
+      <DependentUpon>registerCustomerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\registerCustomerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\sellingForms\registerProductForm.Designer.vb">
+      <DependentUpon>registerProductForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\sellingForms\registerProductForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="packages\Bill.vb" />
+    <Compile Include="packages\codeQRProcess.vb" />
+    <Compile Include="packages\Customer.vb" />
+    <Compile Include="packages\databaseTools.vb" />
+    <Compile Include="packages\activationTools.vb" />
+    <Compile Include="forms\operatorForms\formActivition.Designer.vb">
+      <DependentUpon>formActivition.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\operatorForms\formActivition.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\formCounting.Designer.vb">
+      <DependentUpon>formCounting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\formCounting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\otherForms\convertUSDForm.Designer.vb">
+      <DependentUpon>convertUSDForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\otherForms\convertUSDForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\otherForms\formMyMessageBox.Designer.vb">
+      <DependentUpon>formMyMessageBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\otherForms\formMyMessageBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\operatorForms\formLogin.Designer.vb">
+      <DependentUpon>formLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\operatorForms\formLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\formMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\formMain.Designer.vb">
+      <DependentUpon>formMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="forms\printForms\formReporter.Designer.vb">
+      <DependentUpon>formReporter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\printForms\formReporter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\sellingForms\sellingProductForm.Designer.vb">
+      <DependentUpon>sellingProductForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\sellingForms\sellingProductForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\operatorForms\settingForm.Designer.vb">
+      <DependentUpon>settingForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\operatorForms\settingForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\otherForms\formWaitStatic.Designer.vb">
+      <DependentUpon>formWaitStatic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\otherForms\formWaitStatic.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="packages\Product.vb" />
+    <Compile Include="packages\SellingProduct.vb" />
+    <Compile Include="packages\User.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="forms\debtProductForm.resx">
+      <DependentUpon>debtProductForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\operatorForms\formActivition.resx">
+      <DependentUpon>formActivition.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\formCounting.resx">
+      <DependentUpon>formCounting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\otherForms\convertUSDForm.resx">
+      <DependentUpon>convertUSDForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\otherForms\formMyMessageBox.resx">
+      <DependentUpon>formMyMessageBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\operatorForms\formLogin.resx">
+      <DependentUpon>formLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\formMain.resx">
+      <DependentUpon>formMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\registerCustomerForm.resx">
+      <DependentUpon>registerCustomerForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\sellingForms\registerProductForm.resx">
+      <DependentUpon>registerProductForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\printForms\formReporter.resx">
+      <DependentUpon>formReporter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\sellingForms\sellingProductForm.resx">
+      <DependentUpon>sellingProductForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\operatorForms\settingForm.resx">
+      <DependentUpon>settingForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\otherForms\formWaitStatic.resx">
+      <DependentUpon>formWaitStatic.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Shopment.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="assets\shopCart.ico" />
+    <Content Include="License-LGPL.txt" />
+    <None Include="Resources\21362088691576237150-128.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="..\packages\EmguCV.3.1.0.1\build\EmguCV.targets" Condition="Exists('..\packages\EmguCV.3.1.0.1\build\EmguCV.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
